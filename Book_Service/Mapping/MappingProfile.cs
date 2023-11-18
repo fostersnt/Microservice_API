@@ -9,7 +9,6 @@ namespace Book_Service.Mapping
         public MappingProfile()
         {
             CreateMap<Book, BookDTO>();
-
         }
     }
 }
