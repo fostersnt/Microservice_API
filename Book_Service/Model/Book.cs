@@ -7,6 +7,6 @@ namespace Book_Service.Model
         [Key]
         public int BookId { get; set; }
         public string Name { get; set; }
-        public DateTime CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
     }
 }
