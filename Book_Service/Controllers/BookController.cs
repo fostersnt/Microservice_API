@@ -1,4 +1,5 @@
-﻿using Book_Service.DTO;
+﻿using AutoMapper;
+using Book_Service.DTO;
 using Book_Service.Model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -9,17 +10,22 @@ namespace Book_Service.Controllers
     [ApiController]
     public class BookController : ControllerBase
     {
-        private CommonResponse _response;
-        public BookController()
+        private readonly CommonResponse _response;
+        private readonly IMapper _mapper;
+        public BookController(IMapper mapper)
         {
             _response = new CommonResponse();
+            _mapper = mapper;
         }
         [HttpGet]
         //[Route("books")]
-        public CommonResponse getBook()
+        public IActionResult getBook()
         {
-            _response.Result = new Book{ BookId=1, CreatedAt=DateTime.Now, Name="The Book" };
-            return _response;
+            Book book = new Book { BookId = 1, CreatedAt = DateTime.Now, Name = "The Book" };
+            //_response.Result = new Book{ BookId=1, CreatedAt=DateTime.Now, Name="The Book" };
+            //return _response;
+            var bookMapper = _mapper.Map<BookDTO>(book);
+            return Ok(bookMapper);
         }
     }
 }
