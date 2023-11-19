@@ -1,4 +1,6 @@
 using Book_Service.Data;
+using Book_Service.DTO;
+using Book_Service.Model;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +10,8 @@ var configuration = builder.Configuration;
 builder.Services.AddDbContext<BookAppDbContext>(
     options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"))
     );
+//Trial below. Adding a class for dependency injection
+//builder.Services.AddSingleton<CommonResponse>();
 builder.Services.AddAutoMapper(typeof(Program));
 //builder.Services.AddControllersWithViews();
 builder.Services.AddControllers();
