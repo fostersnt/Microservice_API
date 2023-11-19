@@ -19,13 +19,13 @@ namespace Book_Service.Controllers
         }
         [HttpGet]
         //[Route("books")]
-        public IActionResult getBook()
+        public CommonResponse getBook()
         {
             Book book = new Book { BookId = 1, CreatedAt = DateTime.Now, Name = "The Book" };
-            //_response.Result = new Book{ BookId=1, CreatedAt=DateTime.Now, Name="The Book" };
             //return _response;
             var bookMapper = _mapper.Map<BookDTO>(book);
-            return Ok(bookMapper);
+            _response.Result = bookMapper;
+            return _response;
         }
     }
 }
