@@ -5,7 +5,9 @@ VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{ECCBF984-16AE-4B64-B026-A1DA69CC78E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Book_Service", "Book_Service\Book_Service.csproj", "{693E850C-43C6-49AB-835C-FB5C3D35AAB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Book_Service", "Book_Service\Book_Service.csproj", "{693E850C-43C6-49AB-835C-FB5C3D35AAB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auth_Service", "Auth_Service\Auth_Service.csproj", "{B9A3224D-F9D1-42EF-8C5A-04BB80E19EB9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +19,17 @@ Global
 		{693E850C-43C6-49AB-835C-FB5C3D35AAB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{693E850C-43C6-49AB-835C-FB5C3D35AAB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{693E850C-43C6-49AB-835C-FB5C3D35AAB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9A3224D-F9D1-42EF-8C5A-04BB80E19EB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9A3224D-F9D1-42EF-8C5A-04BB80E19EB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9A3224D-F9D1-42EF-8C5A-04BB80E19EB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9A3224D-F9D1-42EF-8C5A-04BB80E19EB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{693E850C-43C6-49AB-835C-FB5C3D35AAB3} = {ECCBF984-16AE-4B64-B026-A1DA69CC78E2}
+		{B9A3224D-F9D1-42EF-8C5A-04BB80E19EB9} = {ECCBF984-16AE-4B64-B026-A1DA69CC78E2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C79DECF8-EB3C-4C2E-B5DD-DF4301FB03D3}
